@@ -3,8 +3,15 @@ module.exports = function(env) {
 	return {
 		init: function() {
 			env.server.get('/', function( req, res ) {
-				res.setHeader('Location', '/public/');
-				res.send(302);
+				res.send(200, 'hello');
+			});
+		}
+
+
+		// init: function() {
+		// 	env.server.get('/', function( req, res ) {
+		// 		res.setHeader('Location', '/public/');
+		// 		res.send(302);
 			// 	fs.readFile(__dirname + '/public/index.html', {
 			// 		encoding: 'UTF-8'
 			// 	}, function( err, data ) {
@@ -12,8 +19,8 @@ module.exports = function(env) {
 			// 		res.send(200, data);
 			// 	});
 			// });
-		});
-	}
+	// 	});
+	// }
 	// return {
 	// 	init: function() {
 	// 		env.server.get('/', function( req, res ) {

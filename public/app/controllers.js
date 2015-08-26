@@ -26,6 +26,10 @@ function( $scope ) {
 .controller('MainController', ['$scope',
 function( $scope ) {
     $scope.title = "Happy";
+}])
+
+.run(['$state', function( $state ) {
+  $state.go('dashboard');
 }]);
 
 return app;
