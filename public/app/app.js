@@ -8,20 +8,21 @@ var app = angular.module('app',
   'ui.router'
 ])
 
+.controller('DashboardController', ['$scope',
+function( $scope ) {
+
+}])
+
 .config(['$stateProvider',
 function( $stateProvider ) {
   $stateProvider
   .state("dashboard", function( req, res ) {
-    url = "/client",
     templateUrl = "tpl/dashboard_tpl.html",
-    controller = "DashboardController";
+    controller = "DashboardController"
   });
 }])
 
-.controller("DashboardController", ['$scope',
-function( $scope ) {
 
-}])
 
 .controller('MainController', ['$scope',
 function( $scope ) {
