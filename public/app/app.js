@@ -1,6 +1,1 @@
-(function(window) {
-
-  window.alert('I like you!');
-
-
-})();
+window.alert('I like you!');
