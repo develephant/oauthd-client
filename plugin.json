@@ -3,5 +3,5 @@
   "description": "A client admin for oauthd",
   "version": "0.0.0",
   "main": "index.js",
-  "interface_enabled": true
+  "global-interface": true
 }
