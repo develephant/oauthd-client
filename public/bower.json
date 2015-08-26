@@ -1,0 +1,31 @@
+{
+  "name": "oauthd-client",
+  "version": "0.0.1",
+  "authors": [
+    "Chris Byerley <cbyerley@develephant.com>"
+  ],
+  "description": "A client interface for oauthd",
+  "main": "index.html",
+  "directory": "lib",
+  "moduleType": [
+    "node"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-material": "~0.10.0",
+    "angular-ui.router": "~1.4.3",
+    "fira-compact": "develephant/fira-compact#~0.1.0",
+    "material-design-icons-iconfont": "~2.0.3"
+  }
+}
+
+}
