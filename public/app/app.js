@@ -1,1 +1,5 @@
-window.alert('I like you!');
+function al() {
+  alert('I like you!');
+}
+
+al();
