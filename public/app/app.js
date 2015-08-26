@@ -1,6 +1,6 @@
-(function() {
+(function(window) {
 
-  alert('I like you!');
+  window.alert('I like you!');
 
 
 })();
