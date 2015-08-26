@@ -3,4 +3,4 @@
   alert('I like you!');
 
 
-})()
+})();

@@ -15,7 +15,7 @@ module.exports = function(env) {
 					res.send(200, data);
 				});
 			});
-			
+
 		}
 	};
 };
