@@ -6,9 +6,12 @@ restify = require('restify');
 module.exports = function( env ) {
 	return {
 		//create server here
-		env.server.get(/^\/params\/(.*)/, function( req, res ) {
+		env.server.get('/params', function( req, res ) {
 			res.send(200, 'Hello Happy');
 		}
+		// env.server.get(/^\/params\/(.*)/, function( req, res ) {
+		// 	res.send(200, 'Hello Happy');
+		// }
 			// env.server.get(/^(\/.*)/, function( req, res ) {
 			// 	res.send(200, req.params[0]);
 			// }
