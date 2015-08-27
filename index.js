@@ -8,7 +8,7 @@ module.exports = function( env ) {
 		//create server here
 		init: function ()
 		{
-			env.server.get(/^\/(.*)/, function( req, res, next ) {
+			env.server.get(/^(\/.*)/, function( req, res, next ) {
 				var params;
 				if (req.params[0].length > 0 ) {
 					params = req.params[0];
