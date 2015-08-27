@@ -1,3 +1,4 @@
+var fs = require('fs');
 module.exports = function(env) {
 	return {
 		init: function() {
