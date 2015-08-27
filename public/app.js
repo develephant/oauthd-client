@@ -1,36 +1,23 @@
 
-var app = angular.module('app',
+angular.module('app',
 [
   'ngMaterial',
   'ngStorage',
   'ngAnimate',
   'ngAria',
-  'ui.router'
+  'ui.router',
+  'app.controllers'
 ])
 
-.controller('DashboardController', ['$scope',
-function( $scope ) {
+.config(['$stateProvider','$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {
+  $urlRouterProvider.otherwise('/dashboard');
 
-}])
-
-.config(['$stateProvider',
-function( $stateProvider ) {
-  $stateProvider
-  .state("dashboard", function( req, res ) {
-    templateUrl = "tpl/dashboard_tpl.html",
-    controller = "DashboardController"
+  $stateProvider.state("dashboard", {
+    templateUrl: "tpl/dashboard_tpl.html",
+    controller: "DashboardController"
   });
-}])
-
-
-
-.controller('MainController', ['$scope',
-function( $scope ) {
-    $scope.title = "Happy";
 }])
 
 .run(['$state', function( $state ) {
   $state.go('dashboard');
 }]);
-
-return app;

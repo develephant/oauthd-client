@@ -3,12 +3,5 @@
   "description": "A client admin for oauthd",
   "version": "0.0.0",
   "main": "index.js",
-    ".source.js": {
-      "Snippet Name": {
-        "prefix": "hello",
-        "body": "Hello World!"
-      }
-    }
-  }
   "global-interface": true
 }
