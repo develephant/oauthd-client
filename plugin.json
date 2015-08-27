@@ -1,7 +1,7 @@
 {
   "name": "client",
   "description": "A client interface for OAuthd",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "interface_enabled": true
+  "global_interface": true
 }
