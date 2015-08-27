@@ -1,0 +1,27 @@
+{
+  "name": "fira-compact",
+  "version": "0.1.3",
+  "authors": [
+    "The Mozilla Foundation"
+  ],
+  "description": "Mozilla Fira package with minimal fonts for Electron.",
+  "keywords": [
+    "Electron",
+    "mozilla",
+    "fira",
+    "font",
+    "compact"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/develephant/fira-compact.git"
+  },
+  "license": "OFL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
