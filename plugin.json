@@ -1,0 +1,7 @@
+{
+  "name": "client-front",
+  "description": "",
+  "version": "0.0.0",
+  "main": "index.js",
+  "interface_enabled": true
+}
