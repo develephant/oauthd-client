@@ -10,13 +10,13 @@ angular.module('oauthd',
 ])
 
 .config(['$stateProvider', function( $stateProvider ) {
-  $stateProvider.state('home', {
-    url: '/home',
-    templateUrl: 'tpl/home.html',
+  $stateProvider.state('client', {
+    url: '/client',
+    templateUrl: 'tpl/client.html',
     controller: "MainController"
   });
 }])
 
 .run(['$state', function( $state ) {
-  $state.go('home');
+  $state.go('client');
 }]);

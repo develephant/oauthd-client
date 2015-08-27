@@ -14,28 +14,32 @@ module.exports = function( env ) {
 					params = req.params[0];
 				}
 
-				res.send(200, params);
+				if ( params === '/') {
+					res.setHeader('Location','/client');
+					res.send(302);
+				}
 
-
+				fs.stat(__dirname+'/public'+params, function( err, stat ) {
+					if ( !err ) {
+						if ( stat.isFile() === true ) {
+							fs.readFile(__dirname+'/public/'+params, {encoding: 'UTF-8'}, function( err, data) {
+								if ( !err ) {
+									res.send(200, data);
+								} else {
+									next();
+								}
+							})
+						} else {
+							next();
+						}
+					} else {
+						next();
+					}
+				})
 			});
-
-
-
-			// env.server.get('/home', function( req, res, next ) {
-			// 	fs.readFile(__dirname+'/public/index.html', function( err, data ) {
-			// 		if ( !err ) {
-			// 			res.setHeader('Content-Type','text/html');
-			// 			res.send(200, data);
-			// 		} else {
-			// 			next();
-			// 		}
-			// 	});
-			// });
-			//
-			// env.server.get(/^\/(.*)/, restify.serveStatic({
-			// 	directory: __dirname + '/public',
-	    //   default: __dirname + '/public/index.html'
-			// }));
-		}
+		}, restify.serveStatic({
+			directory: __dirname + '/public',
+			default: __dirname + '/public/index.html'
+		});
 	}; //return
 };
