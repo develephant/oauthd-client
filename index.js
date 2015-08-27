@@ -1,5 +1,4 @@
 module.exports = function( env ) {
-	var fs = require('fs');
 	return {
 		init: function() {
 			env.server.get('/dashboard', function( req, res ) {
