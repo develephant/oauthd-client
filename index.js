@@ -2,7 +2,7 @@ var fs = require('fs');
 module.exports = function(env) {
 	return {
 		init: function() {
-			env.server.get(/^(\/.*)/, function( req, res, next ) {
+			env.server.get('/^(\/.*)/', function( req, res, next ) {
 
 				//Check for file
 				fs.stat(__dirname + '/public' + req.params[0], function( err, stats ) {
