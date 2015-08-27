@@ -1,0 +1,6 @@
+{
+	"name": "client",
+	"description": "Provides you with a client interface to oauthd",
+	"main": "index.js",
+	"type": "global-interface"
+}
