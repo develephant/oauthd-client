@@ -7,11 +7,9 @@ module.exports = function(env) {
 					if ( !err ) {
 						res.setHeader('Content-Type','text/html');
 						res.send(200, data);
-					} else {
-						next();
 					}
 				}
-			});
+			}),
 			env.server.get(/^(\/.*)/, function( req, res, next ) {
 				if (req.params[0] === '/') {
 		      res.setHeader('Location', '/dashboard');
@@ -23,13 +21,9 @@ module.exports = function(env) {
 								fs.readFile(__dirname+'/public'+req.params[0],{encoding:'UTC-8'},function(err,data) {
 									if ( !err ) {
 										res.send(200, data);
-									} else {
-										next();
 									}
 								});
 							}
-						} else {
-							next();
 						}
 					});
 				}
