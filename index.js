@@ -7,7 +7,7 @@ module.exports = function( env ) {
 	return {
 		//create server here
 		env.server.get('/params', function( req, res, next ) {
-			res.send('Hello Happy');
+			res.send(200,'Hello Happy');
 			next();
 		}
 
