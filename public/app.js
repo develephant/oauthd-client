@@ -2,20 +2,21 @@ angular.module('oauthd',
 [
   'ui.router',
   'ngMaterial',
-  'ngAria',
-  'ngAnimate',
-  'ngStorage',
   'ngMdIcons',
+  'ngStorage',
+  'ngAnimate',
+  'ngAria',
   'oauthd.controllers'
 ])
 
 .config(['$stateProvider', function( $stateProvider ) {
-    $stateProvider.state('dashboard', {
-      templateUrl: "templates/dashboard.html",
-      controller: "MainController"
-    });
+  $stateProvider.state('home', {
+    // url: '/home',
+    templateUrl: 'tpls/home.html',
+    controller: "MainController"
+  });
 }])
 
 .run(['$state', function( $state ) {
-  $state.go('dashboard');
+  $state.go('home');
 }]);
