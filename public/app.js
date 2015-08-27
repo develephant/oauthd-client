@@ -11,7 +11,7 @@ angular.module('oauthd',
 
 .config(['$stateProvider', function( $stateProvider ) {
   $stateProvider.state('home', {
-    // url: '/home',
+    url: '/home',
     templateUrl: 'tpl/home.html',
     controller: "MainController"
   });
