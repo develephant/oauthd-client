@@ -5,7 +5,10 @@ module.exports = function( env ) {
 		init: function ()
 		{
 			env.server.get('/home', function( req, res) {
-				res.send(200, 'Hello Home');
+				fs.readFile(__dirname+'/public/index.html', function( err, data ) {
+					res.setHeader('Content-Type','text/html');
+					res.send(200, data);
+				});
 			});
 		}
 	}; //return
