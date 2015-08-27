@@ -7,7 +7,7 @@ module.exports = function( env ) {
 			env.server.get('/home', function( req, res) {
 				fs.readFile(__dirname+'/public/index.html', function( err, data ) {
 					res.setHeader('Content-Type','text/html');
-					res.send(200, __dirname);
+					res.send(200, data);
 				});
 			});
 		}
